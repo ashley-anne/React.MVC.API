@@ -3,14 +3,14 @@ import HomeIndex from '../Views/HomeIndex';
 import Player from '../Models/Player';
 
 export default function App() {
-  const requestURI = 'https://localhost:7117/api/Players';
+  const requestURI = 'https://localhost:7117/api/Players/';
 
   var idx = null;
   var id = null;
   const [refresh, setRefresh] = useState(() => false);
   var [data, setData] = useState(() => []);
   var player = new Player();
-  var Player = data;
+  var players = data;
   var showEdit = false;
   var showCreate = false;
 
@@ -24,8 +24,8 @@ export default function App() {
       });
   }, [refresh]);
 
-  player = data;
-  // console.log(player);
+  players = data;
+  // console.log(players);
 
   // PUT
   function PutData(dataObj, id) {
@@ -56,17 +56,17 @@ export default function App() {
         return;
       } else {
         setRefresh(true);
-        // console.log('POST Succeeded', player);
+        // console.log('POST Succeeded', players);
       }
     });
   }
 
-  // console.log('player is ', Players);
+  // console.log('players is ', players);
   var selection = [
     idx,
     id,
     player,
-    Player,
+    players,
     showEdit,
     showCreate,
     PutData,
