@@ -99,7 +99,7 @@ export default function Create(props) {
   players = props.data[1];
   setShowCreate = props.data[2];
   getShowCreate = props.data[3];
-  postData = props.data[4];
+  postData = props.data[9];
 
   // console.log(props, getShowCreate());
 

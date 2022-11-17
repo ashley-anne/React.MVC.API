@@ -14,7 +14,7 @@ var player = {};
 var players = [];
 var setShowEdit = null;
 var getShowEdit = null;
-var putdata = null;
+var putData = null;
 
 const EditForm = ({ onSubmit }) => {
   return (
@@ -70,7 +70,7 @@ export default function Edit(props) {
   players = props.data[3];
   setShowEdit = props.data[4];
   getShowEdit = props.data[5];
-  putdata = props.data[6];
+  putData = props.data[6];
 
   // console.log(props);
 
@@ -101,7 +101,7 @@ export default function Edit(props) {
 
     console.log(players,id)
 
-    putdata(players[idx], id);
+    putData(players[idx], id);
 
     return;
   };

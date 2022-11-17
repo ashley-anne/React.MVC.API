@@ -82,9 +82,9 @@ export default function HomeIndex(props) {
               <Fragment key={item.id}>
                 <tr>
                   <td>{item.name}</td>
-                  <td>{item.numberId}</td>
-                  <td>{item.positionId}</td>
-                  <td>{item.lineId}</td>
+                  <td>{item.number}</td>
+                  <td>{item.position}</td>
+                  <td>{item.line}</td>
                   <td>
                     <div className="d-flex align-items-center justify-content-center">
                       <Button

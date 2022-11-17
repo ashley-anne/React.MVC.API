@@ -36,10 +36,10 @@ const DetailsForm = ({ onSubmit }) => {
       <Form.Group controlId="numberId">
         <Form.Label>Number</Form.Label>
         <Form.Control
-          autoComplete="studioId"
+          autoComplete="numberId"
           type="text"
-          placeholder={players[idx].numberId}
-          defaultValue={players[idx].numberId}
+          placeholder={players[idx].number}
+          defaultValue={players[idx].number}
           readOnly={true}
         />
       </Form.Group>
@@ -49,8 +49,8 @@ const DetailsForm = ({ onSubmit }) => {
         <Form.Control
           autoComplete="positionId"
           type="text"
-          placeholder={players[idx].positionId}
-          defaultValue={players[idx].positionId}
+          placeholder={players[idx].position}
+          defaultValue={players[idx].position}
           readOnly={true}
         />
       </Form.Group>
@@ -67,7 +67,7 @@ function DetailsFormSubmit(e) {
   name = null;
   numberId = 0;
   positionId = 0;
-
+  
   return;
 }
 
