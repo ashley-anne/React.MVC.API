@@ -74,7 +74,7 @@ function DeleteFormSubmit(e) {
   name = null;
   numberId = 0;
   positionId = 0;
-
+  
   return;
 }
 

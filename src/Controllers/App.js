@@ -13,6 +13,8 @@ export default function App() {
   var players = data;
   var showEdit = false;
   var showCreate = false;
+  var showDelete = false;
+  var showDetails = false;
 
   // GET
   useEffect(() => {
@@ -59,6 +61,19 @@ export default function App() {
         // console.log('POST Succeeded', players);
       }
     });
+
+  }
+  // DELETE
+    
+  function DeleteData(dataObj, id) {
+    fetch(requestURI + id, {
+      method: 'DELETE',
+      body: JSON.stringify(dataObj),
+      headers: { 'Content-type': 'application/json; charset=UTF-8' },
+    }).then((response) => {
+      setRefresh(true);
+      // console.log('DELETE response is ', response);
+    });
   }
 
   // console.log('players is ', players);
@@ -69,8 +84,11 @@ export default function App() {
     players,
     showEdit,
     showCreate,
+    showDelete,
+    showDetails,
     PutData,
     PostData,
+    DeleteData,
   ];
 
   return <HomeIndex data={selection} />;

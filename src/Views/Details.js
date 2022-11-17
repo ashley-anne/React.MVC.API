@@ -23,7 +23,7 @@ const DetailsForm = ({ onSubmit }) => {
   return (
     <Form onSubmit={onSubmit}>
       <Form.Group controlId="formBasicTitle">
-        <Form.Label>Player Name</Form.Label>
+        <Form.Label>Name</Form.Label>
         <Form.Control
           autoComplete="name"
           type="text"
@@ -36,7 +36,7 @@ const DetailsForm = ({ onSubmit }) => {
       <Form.Group controlId="numberId">
         <Form.Label>Number</Form.Label>
         <Form.Control
-          autoComplete="numberId"
+          autoComplete="studioId"
           type="text"
           placeholder={players[idx].numberId}
           defaultValue={players[idx].numberId}

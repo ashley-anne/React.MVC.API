@@ -23,10 +23,10 @@ export default function HomeIndex(props) {
   const [showEdit, setShowEdit] = useState(() => props.data[4]);
   const [showCreate, setShowCreate] = useState(() => props.data[5]);
   const [showDelete, setShowDelete] = useState(() => props.data[6]);
-  const [showDetails, setShowDetails] = useState(() => props.data[6]);
-  var putData = props.data[7];
-  var postData = props.data[8];
-  var deleteData = props.data[9];
+  const [showDetails, setShowDetails] = useState(() => props.data[7]);
+  var putData = props.data[8];
+  var postData = props.data[9];
+  var deleteData = props.data[10];
   // console.log(props);
 
   var getShowEdit = () => {
