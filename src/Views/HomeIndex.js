@@ -10,6 +10,7 @@ import Details from './Details';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../index.css';
 
+
 var selectionEdit = [];
 var selectionCreate = [];
 var selectionDelete = [];
@@ -49,8 +50,9 @@ export default function HomeIndex(props) {
 
   return (
     <div>
+      
       <div className="d-flex align-items-center justify-content-left">
-        <Button
+        <Button id="btn"
           onClick={(e) => {
             e.preventDefault();
             setShowCreate(true);
@@ -64,10 +66,10 @@ export default function HomeIndex(props) {
             // console.log(selectionCreate);
           }}
         >
-          <h5>Create</h5>
+          <h5> Add A Player</h5>
         </Button>
       </div>
-      <table>
+      <table className='grid'>
         <thead>
           <tr>
             <th>Name</th>
@@ -87,7 +89,7 @@ export default function HomeIndex(props) {
                   <td>{item.line}</td>
                   <td>
                     <div className="d-flex align-items-center justify-content-center">
-                      <Button
+                      <Button id="btn"
                         onClick={(e) => {
                           e.preventDefault();
                           setShowEdit(true);
@@ -104,13 +106,13 @@ export default function HomeIndex(props) {
                           ];
                         }}
                       >
-                        Edit
+                        Player Edit
                       </Button>
                     </div>
                   </td>
                   <td>
                     <div className="d-flex align-items-center justify-content-center">
-                      <Button
+                      <Button id="btn"
                         onClick={(e) => {
                           e.preventDefault();
                           setShowDetails(true);
@@ -126,13 +128,13 @@ export default function HomeIndex(props) {
                           ];
                         }}
                       >
-                        Details
+                        Player Details
                       </Button>
                     </div>
                   </td>
                   <td>
                     <div className="d-flex align-items-center justify-content-center">
-                      <Button
+                      <Button id="btn"
                         onClick={(e) => {
                           e.preventDefault();
                           setShowDelete(true);
@@ -149,7 +151,7 @@ export default function HomeIndex(props) {
                           ];
                         }}
                       >
-                        Delete
+                        Delete Player
                       </Button>
                     </div>
                   </td>
@@ -164,7 +166,9 @@ export default function HomeIndex(props) {
         <Create show={showCreate} data={selectionCreate} />
         <Delete show={showDelete} data={selectionDelete} />
         <Details show={showDetails} data={selectionDetails} />
+       
       </div>
     </div>
+    
   );
 }
